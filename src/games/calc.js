@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import { showWelcome, getNumber } from '../index.js';
+import { showWelcome, getNumber, answer } from '../index.js';
 
 const name = showWelcome();
 console.log('What is the result of the expression?');
@@ -21,7 +20,7 @@ const playRound = () => {
   } else {
     correctAnswer = num1 * num2;
   }
-  const userAnswer = Number(readlineSync.question('Your answer: '));
+  const userAnswer = Number(answer());
   return [userAnswer, correctAnswer];
 };
 

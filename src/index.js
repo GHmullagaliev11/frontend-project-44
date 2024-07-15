@@ -8,4 +8,5 @@ export const showWelcome = () => {
   return name;
 };
 
+export const answer = () => readlineSync.question('Your answer: ');
 export const getNumber = (num) => Math.round(Math.random() * num);
